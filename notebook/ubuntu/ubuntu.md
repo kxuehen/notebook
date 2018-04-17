@@ -46,6 +46,22 @@ sudo smbpasswd -a username #为已存在用户添加访问共享文件时需要�
    valid users = usrname #允许访问者的名字
 ```
 
+#### 挂载硬盘
+
+```shell
+sudo mount /dev/sda1 /home/lpadas2/share/HDD 
+#            硬盘         挂载地址
+```
+
+#### 链接文件
+
+```shell
+ln -s /home/lpadas2/share/HDD/wucw_HDD /home/wucw/share/HDD
+#                源文件                    链接产生的新文件
+```
+
+
+
 ### 安装软件
 
 #### 离线安装python软件
@@ -78,6 +94,13 @@ git init #在工作目录下执行该命令，可以执行初始化操作
 git remote add origin git_url #将远程仓库网址利用origin表示，使用ssh连接github时，git_url需要是ssh连接
 git remote set-url origin new_url #修改origin表示的远程网址
 ```
+
+### shadowsocks
+```shell
+sslocal -c ~/shadow.json #打开本地代理接口
+```
+
+
 
 
 
